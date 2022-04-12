@@ -1,0 +1,76 @@
+.container {
+    background-color: rgb(222, 227, 230);
+    display: flex;
+    min-height: 600px;
+    width: auto;
+}
+
+.sidebar {
+    background-color: rgb(27, 27, 27);
+    height: auto;
+    width: 40%;
+    border: 5px solid yellow;
+}
+
+.filling {
+    background-color: rgb(153, 216, 117);
+    display: flex;
+    padding: 5px;
+}
+
+.Bitcoin {
+    background-color: green;
+    padding-top: 15px;
+
+    text-align: center;
+
+}
+
+.Ethereum {
+    background-color: limegreen;
+    padding-top: 15px;
+    text-align: center;
+
+}
+
+.Celo {
+    background-color: greenyellow;
+    padding-top: 15px;
+    text-align: center;
+
+
+}
+
+.text {
+    color: rgb(202, 202, 35);
+    padding: 10px;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+a {
+    color: rgb(222, 227, 230);
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    height: auto;
+    width: 80%;
+    margin-bottom: 20px;
+
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        background-color: red;
+    }
+
+    .filling {
+        flex-direction: column;
+    }
+}
