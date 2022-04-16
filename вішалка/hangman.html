@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>вiшалка</title>
+</head>
+<body>
+    <h1>Вiшалка!</h1>
+
+    <script>
+     //Створюємо масив з словами
+        var words = [
+            "програма",
+            "капуста",
+            "абсурд",
+            "шашлик",
+            "чудовий",
+            "балкон",
+            "картон"
+        ];
+     //Вибираємо випадкове слово
+     var word = words [Math.floor ( Math.random() * words.length)];
+     //Створюємо кінцевий масив
+     var answerArray = [];
+     for (var i=0; i < word.length; i++) {
+         answerArray[i]= "_ ";
+     }
+
+     var remainingLetters=word.length;
+
+     //ігровий цикл
+     while(remainingLetters>0) {
+         //повідомляємо простан гри
+         alert(answerArray.join(" "));
+         //питаємося варіант відповіді
+         var guess= prompt ("Вгадайте букву, або натиснiть `Отмена` для виходу з гри.");
+         if (guess === null){
+             //виходимо з ігрового циклу
+             break;
+         }
+         else if (guess.length !==1) {
+             alert ("Будь ласка, введiть одну букву.");
+         }
+         else{
+             //оновлюємо стан гри
+             for (var j=0; j<word.length; j++) {
+                 if (word[j] === guess) {
+                     answerArray[j] = guess;
+                     remainingLetters --;
+                 }
+             }
+         }
+         //кінець ігрового циклу
+     }
+
+     //показуємо відповідь, і вітаємо гравця
+     alert(answerArray.join(" "));
+     alert("Чудово! Ви вiдгадали слово "+"`"+ word +"`");
+
+
+
+    </script>
+</body>
+</html>
